@@ -56,6 +56,9 @@ function promptIt(isSplash, win) { //function to handle prompting
 		.then((r) => {
 			if (r == null) {
 				console.log("user cancelled!");
+				if (!isSplash) {
+					app.quit();
+				}
 			} else {
 				console.log('result', r);
 				if (isSplash) {
